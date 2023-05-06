@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import {Row, Col } from "react-bootstrap";
 
 export const About = () => {
   return (
-    <Container>
+    <div style={{backgroundColor: '#b6f0c2', height: "92vh", padding: "1rem 3rem", fontFamily: "Roboto", fontSize: "1.1rem"}}>
       <Row>
         <Col>
           <h1 className="mt-4">About Project</h1>
@@ -12,7 +12,7 @@ export const About = () => {
             <p>
             Our project utilizes a Random Forest Classifier to predict whether or not a student will be able to adapt to online learning.
             </p>
-            <p>
+            <p style={{width: "80vw"}}>
             As the world moves towards more online and remote learning
             environments, it has become increasingly important to understand the
             factors that contribute to a student's success in this type of
@@ -37,6 +37,6 @@ export const About = () => {
           </ul>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-const styles = {
-    position: 'absolute',
-    top: '50%',
-    left: '80%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: '999'
-  };
+// const styles = {
+//     position: 'absolute',
+//     top: '50%',
+//     left: '80%',
+//     transform: 'translate(-50%, -50%)',
+//     zIndex: '999'
+//   };
 
   
 
@@ -23,7 +23,7 @@ export const Predict = () => {
   const [networkType, setNetworkType] = useState("");
   const [classDuration, setClassDuration] = useState("");
   const [device, setDevice] = useState("");
-  const [result, setResult] = useState("Submit to Predict");
+  const [result, setResult] = useState("");
 
   // Function to handle form submission
   const handleSubmit = async (e) => {
@@ -75,7 +75,7 @@ export const Predict = () => {
 
   return (
     <>
-      <div className="row">
+      <div className="row" style={{backgroundColor: '#b6f0c2', height: "92vh"}}>
         <form onSubmit={handleSubmit}>
           {/* Gender */}
           <div className="col-sm-6 ms-5 mt-3" >
@@ -89,8 +89,8 @@ export const Predict = () => {
                 required    
               >
                 <option value="">-- Select Gender --</option>
-                <option value="Boy">Boy</option>
-                <option value="Girl">Girl</option>
+                <option value="Boy">Male</option>
+                <option value="Girl">Female</option>
               </select>
             </label>
           </div>
@@ -255,7 +255,7 @@ export const Predict = () => {
               >
                 <option value="">-- Select Class Duration --</option>
                 <option value="0">0 hours</option>
-                <option value="1-3 hours">1-3 hours</option>
+                <option value="1-3">1-3 hours</option>
                 <option value="3-6">3-6 hours</option>
               </select>
             </label>
@@ -279,12 +279,10 @@ export const Predict = () => {
               </select>
             </label>
           </div>
-          <button className=" ms-5" type="submit">
-            Submit
-          </button>
+          <button type="submit" class="btn btn-outline-primary ms-5">Submit</button>
         </form>
         
-        <div style={styles}>
+        <div >
 
           <h4>{result}</h4>  
 
